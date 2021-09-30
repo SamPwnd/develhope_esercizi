@@ -37,35 +37,24 @@
 			<input type="tel" name="tel" id="tel" required>
 		</div>
 		<div>
-			<p>Scegli un piano di abbonamento</p>
-			
-			<label for="plan1">
-				<input type="radio" id="plan1" name="plan" value="plan-free" required>
-				Piano free
-			</label><br>
-			
-			<label for="plan2">
-				<input type="radio" id="plan2" name="plan" value="plan-5euro">
-				Piano 5€/mese
-			</label><br>
-			
-			<label for="plan3">
-				<input type="radio" id="plan3" name="plan" value="plan-10euro">
-				Piano 10€/mese
-			</label><br>			
-			
-			<label for="plan4">
-				<input type="radio" id="plan4" name="plan" value="plan-20euro">
-				Piano 20€/mese
-			</label><br>
+			<label for="plan">Scegli un piano di abbonamento</label>
+            <select name="plan" id="plan">
+                <option value="free-plan">Piano Free</option>
+                <optgroup label="A pagamento">
+                    <option value="5-plan">Piano 5€/mese</option>
+                    <option value="10-plan">Piano 10€/mese</option>
+                    <option value="20-plan">Piano 20€/mese</option>
+                </optgroup>
+            </select>
 		</div>
+		<br>
 		<div>
 			<label for="pro">
 				Vantaggi PRO
 				<input type="checkbox" id="pro">
 			</label>
-			
 		</div>
+		<br>
 		<div>
 			<fieldset>
 				<legend>Carta di credito</legend>
