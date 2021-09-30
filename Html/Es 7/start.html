@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Form</h1>
+	<form action="#">
+		<div>
+		    <label for="email">Indirizzo email:</label>
+		    <input type="email" id="email" required>
+	    </div>
+		<div>
+			<label for="pssw">Password:</label>
+			<input type="password" id="pssw" required>
+		</div>
+		<div>
+			<label for="nom-cogn">Nome e cognome:</label>
+			<input type="text" id="nom-cogn" required>
+		</div>
+		<div>
+			<label for="bday">Data di nascita:</label>
+			<input type="date" name="bday" id="bday" max="2021-10-01" required>
+		</div>
+		<div>
+			<label for="tel">Numero di telefono:</label>
+			<input type="tel" name="tel" id="tel" required>
+		</div>
+		<div>
+			<p>Scegli un piano di abbonamento</p>
+			
+			<label for="plan1">
+				<input type="radio" id="plan1" name="plan" value="plan-free" required>
+				Piano free
+			</label><br>
+			
+			<label for="plan2">
+				<input type="radio" id="plan2" name="plan" value="plan-5euro">
+				Piano 5€/mese
+			</label><br>
+			
+			<label for="plan3">
+				<input type="radio" id="plan3" name="plan" value="plan-10euro">
+				Piano 10€/mese
+			</label><br>			
+			
+			<label for="plan4">
+				<input type="radio" id="plan4" name="plan" value="plan-20euro">
+				Piano 20€/mese
+			</label><br>
+		</div>
+		<div>
+			<label for="pro">
+				Vantaggi PRO
+				<input type="checkbox" id="pro">
+			</label>
+			
+		</div>
+		<div>
+			<fieldset>
+				<legend>Carta di credito</legend>
+				<label for="card">Numero carta:</label>
+				<input type="number" id="card" required>
+				<label for="cvc">CVC:</label>
+				<input type="number" id="cvc" required>
+				<label for="date">Scadenza:</label>
+				<input type="date" id="date" min="2021-09-30" required>
+			</fieldset>
+		</div>
+		<div>
+			<label for="addr">Indirizzo di fatturazione:</label>
+			<input type="text" id="addr" required>
+		</div>
+		<button type="submit">Registrati</button>
+	</form>
+</body>
+
+</html>
