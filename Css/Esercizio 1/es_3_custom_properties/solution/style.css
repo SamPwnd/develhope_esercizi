@@ -1,0 +1,19 @@
+:root {
+    --size: 100px;
+    --x-speed: 5s;
+    --y-speed: 7s;
+    --transition-speed: 2.2s;
+    --ball-color: #ff8800;
+    --bg-color: #001111;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.ball {
+    width: var(--size);
+    height: var(--size);
+    border-radius: calc(var(--size) / 2);
+    background-color: var(--ball-color);
+}
