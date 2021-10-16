@@ -1,0 +1,42 @@
+body {
+	font-family: monospace;
+}
+
+#expand-toggle {
+	display: none;
+}
+
+#expand-toggle:checked ~ * .expandable{
+	visibility: visible;
+}
+
+#expand-toggle:checked ~ #expand-btn::before{
+	content: "Nascondi ";
+}
+
+#expand-btn::before{
+	content: "Mostra ";
+}
+
+#expand-toggle:checked ~ #expand-btn {
+	background-color: #88ff88;
+}
+
+.expandable {
+	visibility: collapse;
+	background: gray;
+	color: white;
+	transition: visibility 0;
+}
+
+#expand-btn {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 6px 12px;
+	background-color: #ff8888;
+	border: 1px solid;
+	border-radius: 3px;
+	transition: 0.3s;
+} 
+
+
