@@ -5,10 +5,13 @@ class Person {
     this.lastName = lastName;
     this.age = age;
   }
+
+  toJson() {
+    return JSON.stringify(this);
+  }
 }
 
 const developer = new Person(1, 'Mario', 'Rossi', 25);
 
 // Print developer as json object
-let json = JSON.stringify(developer);
-console.log(json);
+console.log(developer.toJson());
