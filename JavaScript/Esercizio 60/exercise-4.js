@@ -56,13 +56,6 @@ function fetchJobById(id) {
   });
 }
 
-// fetchPersonById(3)
-// .then((person) => console.log(person))
-// .catch((err) => console.log(`Errore: ${err}`));
-
-// fetchJobById(1)
-// .then((job) => console.log(job))
-// .catch((err) => console.log(`Errore: ${err}`));
 
 Promise.all([fetchPersonById(3), fetchJobById(2)])
 .then((result) => console.log(result))
