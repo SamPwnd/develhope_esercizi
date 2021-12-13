@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario"/>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+/*   const firstName = document.querySelector('#firstName');
+  const lastName = document.querySelector('#lastName');
+  const age = document.querySelector('#age'); */
+
+  const inputEl = document.querySelectorAll('input');
+  const person = new Object();
+  inputEl.forEach(input => {
+    Object.assign(person, { [input.id]: input.value});
+  })
+  const formEl = document.querySelector('form');
+  formEl.setAttribute('data-person', JSON.stringify(person));
+
+  console.log(formEl);
+  console.log(person);
+</script>
