@@ -41,17 +41,17 @@ const obj: UserInterface = {
 }
 
 interface UserInterface {
-    id: number;
+    id?: number;
     name: string;
     surname: string;
-    age: number;
-    dateOfBirth: string;
-    address: Address;
-    role: Role;
-    username: string;
-    profilePhotoUrl: string;
-    companies: Companies[];
-    gender: Gender;
+    age?: number;
+    dateOfBirth?: string;
+    address?: Address;
+    role?: Role;
+    username?: string;
+    profilePhotoUrl?: string;
+    companies?: Companies[];
+    gender?: Gender;
 }
 
 interface Address {
@@ -68,24 +68,19 @@ interface Companies {
 }
 
 class User implements UserInterface {
-    id: number;
+    
     name: string;
     surname: string;
-    age: number;
-    dateOfBirth: string;
-    address: Address;
-    role: Role;
-    username: string;
-    profilePhotoUrl: string;
-    companies: Companies[];
-    gender: Gender;
 
     constructor(name: string, surname: string){
         this.name = name;
         this.surname = surname;
-    };
+    }
 
-    fullName(){
+    fullName():string {
         return `${this.name} ${this.surname}`;
     }
 }
+
+let user:User = new User('Samuele', 'Minissale');
+console.log(user.fullName());
